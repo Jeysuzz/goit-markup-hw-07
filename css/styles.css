@@ -866,13 +866,16 @@ img {
 }
 
 /* Table Media */
-@media screen and (max-width: 428px) {
+@media screen and (min-width: 320px) and (max-width: 428px) {
   .container {
     width: 428px;
   }
   .section {
     margin: 0px 0px;
   }
+
+  /* -- INDEX -- */
+  /* on/off */
   .nav-menu,
   .contacts-menu,
   .benefits .icon,
@@ -917,6 +920,7 @@ img {
 
   .team {
     display: flex;
+    justify-content: center;
   }
 
   .footer {
@@ -936,18 +940,40 @@ img {
     margin-top: 72px;
   }
 
-  .footer-subscribe,
-  .footer-subscribe .footer-form {
+  .footer-subscribe {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-heading {
+    display: flex;
+    text-align: center;
+  }
+
+  .footer-subscribe {
     display: flex;
     flex-direction: column;
     margin-left: 0px;
     align-items: center;
-  }
-
-  .footer-subscribe {
     margin-top: 72px;
   }
+
+  .footer-form {
+    display: block;
+  }
+
   .footer-form .form-input {
-    width: 396px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  /* PORTFOLIO */
+  .button.filter {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .projects {
+    display: block;
   }
 }
