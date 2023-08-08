@@ -864,3 +864,90 @@ img {
   line-height: 24px; /* 200% */
   letter-spacing: 0.48px;
 }
+
+/* Table Media */
+@media screen and (max-width: 428px) {
+  .container {
+    width: 428px;
+  }
+  .section {
+    margin: 0px 0px;
+  }
+  .nav-menu,
+  .contacts-menu,
+  .benefits .icon,
+  .what-we-do {
+    display: none;
+  }
+
+  .navigation {
+    height: 72px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .benefits {
+    display: block;
+    margin-top: 0px;
+  }
+
+  .benefits .title {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .benefits > .item::after {
+    margin-top: 0px;
+    margin-bottom: 72px;
+  }
+  .benefits .description > br {
+    display: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+  }
+  /* Added in Index */
+  .section-title-mobile {
+    display: none;
+  }
+
+  .team {
+    display: flex;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+  }
+  .footer-description {
+    text-align: left;
+    margin-left: 80px;
+  }
+
+  .footer-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    align-items: center;
+    margin-top: 72px;
+  }
+
+  .footer-subscribe,
+  .footer-subscribe .footer-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    align-items: center;
+  }
+
+  .footer-subscribe {
+    margin-top: 72px;
+  }
+  .footer-form .form-input {
+    width: 396px;
+  }
+}
