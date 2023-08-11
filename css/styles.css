@@ -25,6 +25,9 @@ body {
   letter-spacing: 0.04em;
 }
 
+.hamburger {
+  display: none;
+}
 h1,
 h2,
 h3,
@@ -147,9 +150,9 @@ img {
   line-height: 24px;
   letter-spacing: 0.32px;
   text-decoration: none;
-  display: inline-flex;
+  /* display: inline-flex;
   padding-top: 32px;
-  padding-bottom: 31px;
+  padding-bottom: 31px; */
 }
 
 .contacts-menu .contact {
@@ -865,17 +868,11 @@ img {
   letter-spacing: 0.48px;
 }
 
-/* Table Media */
-@media screen and (min-width: 320px) and (max-width: 428px) {
+/* Mobile Menu Modal */
+@media screen and (max-width: 728px) {
   .container {
     width: 428px;
   }
-  .section {
-    margin: 0px 0px;
-  }
-
-  /* -- INDEX -- */
-  /* on/off */
   .nav-menu,
   .contacts-menu,
   .benefits .icon,
@@ -883,102 +880,29 @@ img {
     display: none;
   }
 
-  .navigation {
-    height: 72px;
-  }
-
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .benefits {
-    display: block;
-    margin-top: 0px;
-  }
-
-  .benefits .title {
-    font-size: 36px;
-    text-align: center;
-    margin-top: 0px;
-  }
-
-  .benefits > .item::after {
-    margin-top: 0px;
-    margin-bottom: 72px;
-  }
-  .benefits .description > br {
-    display: none;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.32px;
-  }
-  /* Added in Index */
-  .section-title-mobile {
-    display: none;
-  }
-
-  .team {
+  .team.item {
     display: flex;
+    align-items: center;
     justify-content: center;
   }
 
-  .footer {
-    display: block;
-    text-align: center;
-  }
-  .footer-description {
-    text-align: left;
-    margin-left: 80px;
+  .social-team {
+    background-color: yellow;
+    padding: 0px 16px;
   }
 
-  .footer-block {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0px;
-    align-items: center;
-    margin-top: 72px;
-  }
-
-  .footer-subscribe {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-heading {
-    display: flex;
-    text-align: center;
-  }
-
-  .footer-subscribe {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0px;
-    align-items: center;
-    margin-top: 72px;
-  }
-
-  .footer-form {
-    display: block;
-  }
-
-  .footer-form .form-input {
+  /* .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 24px;
-  }
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  } */
 
-  /* PORTFOLIO */
-  .button.filter {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .projects {
-    display: block;
-  }
-
-  /* Hamburger MODAL */
-  .modal {
+  /* .menu {
     position: absolute;
     padding-top: 46px;
     padding-right: 24px;
@@ -991,8 +915,108 @@ img {
     background-color: var(--dairy);
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .backdrop.is-hidden .modal {
+  } */
+
+  /* .backdrop.is-hidden .menu {
     transform: translate(-50%, -50%) scale(0);
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: var(--cornflower);
+    color: var(--navy-blue);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-close-icon {
+    fill: currentColor;
+  }
+
+  .menu-close-icon:hover,
+  .menu-close-icon:focus {
+    color: var(--white);
+    background-color: var(--ocean);
+  }
+
+  .is-open {
+    visibility: none;
+    opacity: 0;
+    pointer-events: none;
+  } */
+}
+@media screen and (max-width: 1157px) {
+  .container {
+    width: 768px;
+  }
+
+  .hamburger,
+  .benefits .icon {
+    display: none;
+  }
+  .menu {
+    width: 768px;
+    height: 72px;
+    padding: 0;
+  }
+
+  .contacts-menu {
+    font-size: 12px;
+    display: block;
+    flex-wrap: wrap;
+    margin-right: 0;
+    padding: 0;
+    display: block;
+    flex-wrap: wrap;
+    text-align: right;
+
+    height: 72px;
+  }
+  .contacts-menu {
+    row-gap: 0;
+    margin: 0;
+  }
+  /* .menu2 {
+  } */
+
+  .contacts-menu .contact {
+    display: flex;
+    /* margin: 16px 0; */
+    text-align: right;
+
+    justify-content: center;
+    padding: 0;
+
+    margin-top: 10px;
+  }
+
+  .contacts-menu .item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .navigation {
+    margin-right: 115px;
+  }
+
+  .hero {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; /* 107.143% */
+    letter-spacing: 1.12px;
+  }
+
+  .benefits .icon {
   }
 }
