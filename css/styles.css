@@ -448,7 +448,7 @@ img {
 
 .social-team .link:hover,
 .social-team .link:focus {
-  background-color: var(--green);
+  background-color: var(--ocean);
   color: var(--white);
 }
 
@@ -653,6 +653,38 @@ img {
   opacity: 0;
   pointer-events: none;
 }
+.hamburger-contact {
+  font-size: 33px;
+  color: var(--iris);
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  line-height: 40px;
+}
+.mobile-social-footer .icon-item + .icon-item {
+  margin-left: 56px;
+}
+
+.mobile-social-footer .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--iris);
+  border-radius: 50%;
+  color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-social-footer .link:hover,
+.mobile-social-footer .link:focus {
+  background-color: var(--green);
+}
+
+.mobile-social-footer .icon {
+  fill: currentColor;
+}
 
 /* Project-Card Hover Effect*/
 
@@ -856,7 +888,7 @@ img {
 }
 
 /* Hamburger Menu*/
-.hamburger-menu-link {
+.hamburger-page {
   font-family: var(--font-family-roboto);
   font-size: 36px;
   font-style: normal;
@@ -869,13 +901,13 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hamburger-menu-link:focus {
+.hamburger-page:focus {
   color: var(--iris-color);
 }
-.mobile-menu .hamburger-menu-link.current {
+.mobile-menu .hamburger-page.current {
   color: var(--iris);
 }
-.mobile-menu-item:not(:last-child) {
+.mobile-item:not(:last-child) {
   margin-bottom: 40px;
 }
 .hamburger-contact-link {
@@ -893,13 +925,13 @@ img {
 .hamburger-contact-link:focus {
   color: var(--ocean-color);
 }
-.mobile-contact-link {
-  margin-top: auto;
+.mobile-contacts-menu {
+  margin-top: 284px;
 }
 .mobile-contact-item:not(:last-child) {
   margin-bottom: 40px;
 }
-.email-link {
+.hamburger-email {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -909,7 +941,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.email-link:focus {
+.hamburger-email:focus {
   color: var(--iris-color);
 }
 .mobile-menu-social-list {
@@ -1203,7 +1235,7 @@ img {
 
   .benefits {
     display: block;
-    margin: auto;
+
     max-width: 428px;
   }
   .section.no-top-padding {
@@ -1279,6 +1311,12 @@ img {
   .social-footer {
     display: flex;
     justify-content: center;
+  }
+
+  .mobile-social-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
   }
 
   .footer-block {
