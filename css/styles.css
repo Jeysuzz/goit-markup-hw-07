@@ -1386,6 +1386,8 @@ img {
   position: absolute;
   top: 0;
   right: 0;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background-color: var(--cornflower);
 }
